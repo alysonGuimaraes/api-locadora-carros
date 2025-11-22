@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Backend/">
+    <Project Path="src/Backend/RentCars.API/RentCars.API.csproj" Id="836eb2e1-75e7-4574-bf62-caf943954118" />
+    <Project Path="src/Backend/RentCars.Application/RentCars.Application.csproj" Id="6056ea69-d3a1-41a2-abb0-9e2e93f67c81" />
+    <Project Path="src/Backend/RentCars.Domain/RentCars.Domain.csproj" Id="6db19d15-ec7f-4c9b-819d-c236e7f5d1e9" />
+    <Project Path="src/Backend/RentCars.Infrastructure/RentCars.Infrastructure.csproj" Id="466ff14b-b57b-4876-b4e7-d0641899adff" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/RentCars.Communication/RentCars.Communication.csproj" Id="9b22918d-902a-4a54-a9c4-7ee2c5362df3" />
+    <Project Path="src/Shared/RentCars.Exceptions/RentCars.Exceptions.csproj" Id="f37a9220-f7c8-4cce-a443-66361f8f7807" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
