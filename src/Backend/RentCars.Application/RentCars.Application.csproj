@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Shared\RentCars.Communication\RentCars.Communication.csproj" />
     <ProjectReference Include="..\..\Shared\RentCars.Exceptions\RentCars.Exceptions.csproj" />
     <ProjectReference Include="..\RentCars.Domain\RentCars.Domain.csproj" />
