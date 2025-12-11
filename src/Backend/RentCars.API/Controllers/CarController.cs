@@ -11,11 +11,12 @@ namespace RentCars.API.Controllers
     {
         [HttpPost]
         [ProducesResponseType(typeof(ResponseRegisteredCarJson), StatusCodes.Status201Created)]
-        public IActionResult Register(RequestRegisterCarJson request)
-        {
-            var useCase = new RegisterCarUseCase();
 
-            var result = useCase.Execute(request);
+        public async Task<IActionResult> Register(
+            [FromServices]IRegisterCarUseCase useCase,
+            [FromBody]RequestRegisterCarJson request)
+        {
+            var result = await useCase.Execute(request);
 
             return Created(string.Empty, result);
         }

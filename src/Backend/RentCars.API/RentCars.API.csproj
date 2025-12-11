@@ -14,6 +14,7 @@
     <ProjectReference Include="..\..\Shared\RentCars.Communication\RentCars.Communication.csproj" />
     <ProjectReference Include="..\..\Shared\RentCars.Exceptions\RentCars.Exceptions.csproj" />
     <ProjectReference Include="..\RentCars.Application\RentCars.Application.csproj" />
+    <ProjectReference Include="..\RentCars.Infrastructure\RentCars.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

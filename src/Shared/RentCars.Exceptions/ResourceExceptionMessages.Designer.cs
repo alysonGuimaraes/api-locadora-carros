@@ -70,6 +70,15 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to License Plate already registered for another car..
+        /// </summary>
+        public static string LICENSE_PLATE_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("LICENSE_PLATE_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &apos;Model&apos; cannot be empty..
         /// </summary>
         public static string MODEL_EMPTY {
