@@ -123,6 +123,9 @@
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>A placa já existe para outro carro.</value>
   </data>
+  <data name="LICENSE_PLATE_EMPTY" xml:space="preserve">
+    <value>O campo 'License_Plate' não pode ser vazio.</value>
+  </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
     <value>O campo 'Model' não pode ser vazio.</value>
   </data>

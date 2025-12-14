@@ -2,12 +2,21 @@ using RentCars.API.Filters;
 using RentCars.API.Middleware;
 using RentCars.Application;
 using RentCars.Infrastructure;
+using RentCars.Infrastructure.Migrations;
+using RentCars.Infrastructure.Extensions;
+using System.Text.Json.Serialization;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
- 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.AddApplication();
@@ -33,4 +42,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+MigrateDatabase();
+
 app.Run();
+
+void MigrateDatabase()
+{
+    var connectionString = builder.Configuration.ConnectionString();
+
+    var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+
+    DatabaseMigrations.Migrate(connectionString, serviceScope.ServiceProvider);
+}

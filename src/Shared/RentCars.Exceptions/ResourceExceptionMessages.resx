@@ -123,6 +123,9 @@
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>License Plate already registered for another car.</value>
   </data>
+  <data name="LICENSE_PLATE_EMPTY" xml:space="preserve">
+    <value>The field 'License_Plate' cannot be empty.</value>
+  </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
     <value>The field 'Model' cannot be empty.</value>
   </data>

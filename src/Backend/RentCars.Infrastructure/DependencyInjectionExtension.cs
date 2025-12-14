@@ -1,10 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentMigrator.Runner;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RentCars.Domain.Repositories;
 using RentCars.Domain.Repositories.Car;
 using RentCars.Infrastructure.DataAccess;
 using RentCars.Infrastructure.DataAccess.Repositories;
+using RentCars.Infrastructure.Extensions;
+using System.Reflection;
 
 namespace RentCars.Infrastructure
 {
@@ -13,12 +16,13 @@ namespace RentCars.Infrastructure
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             AddDbContext_Postgres(services, configuration);
-            AddRepositories(services, configuration);
+            AddFluentMigrator_Postgres(services, configuration);
+            AddRepositories(services);
         }
 
         private static void AddDbContext_Postgres(IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("ConnectionPostgres");
+            var connectionString = configuration.ConnectionString();
 
             services.AddDbContext<RentCarsDBContext>(dbContextOptions =>
             {
@@ -26,12 +30,25 @@ namespace RentCars.Infrastructure
             });
         }
 
-        private static void AddRepositories(IServiceCollection services, IConfiguration configuration)
+        private static void AddRepositories(IServiceCollection services)
         {
             services.AddScoped<IUnitWork, WorkUnit>();
 
             services.AddScoped<ICarWriteOnlyRepository, CarRepository>();
             services.AddScoped<ICarReadOnlyRepository, CarRepository>();
+        }
+
+        private static void AddFluentMigrator_Postgres(IServiceCollection services, IConfiguration configuration)
+        {
+            var connectionString = configuration.ConnectionString();
+
+            services.AddFluentMigratorCore().ConfigureRunner(options =>
+            {
+                options
+                .AddPostgres()
+                .WithGlobalConnectionString(connectionString)
+                .ScanIn(Assembly.Load("RentCars.Infrastructure")).For.All();
+            });
         }
     }
 }

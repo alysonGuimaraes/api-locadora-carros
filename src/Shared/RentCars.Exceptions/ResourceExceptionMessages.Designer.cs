@@ -79,6 +79,15 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &apos;License_Plate&apos; cannot be empty..
+        /// </summary>
+        public static string LICENSE_PLATE_EMPTY {
+            get {
+                return ResourceManager.GetString("LICENSE_PLATE_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &apos;Model&apos; cannot be empty..
         /// </summary>
         public static string MODEL_EMPTY {
