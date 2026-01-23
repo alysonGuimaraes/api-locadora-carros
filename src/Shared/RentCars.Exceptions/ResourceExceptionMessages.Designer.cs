@@ -61,7 +61,7 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The field &apos;Brand&apos; cannot be empty..
+        ///   Looks up a localized string similar to The field &apos;brand&apos; cannot be empty..
         /// </summary>
         public static string BRAND_EMPTY {
             get {
@@ -79,7 +79,7 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The field &apos;License_Plate&apos; cannot be empty..
+        ///   Looks up a localized string similar to The field &apos;license_Plate&apos; cannot be empty..
         /// </summary>
         public static string LICENSE_PLATE_EMPTY {
             get {
@@ -88,11 +88,38 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The field &apos;Model&apos; cannot be empty..
+        ///   Looks up a localized string similar to &quot;license plate&quot; should be between 0 and 7 characteres length..
+        /// </summary>
+        public static string LICENSE_PLATE_LENGTH_OUT_OF_RANGE {
+            get {
+                return ResourceManager.GetString("LICENSE_PLATE_LENGTH_OUT_OF_RANGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;model&apos; cannot be empty..
         /// </summary>
         public static string MODEL_EMPTY {
             get {
                 return ResourceManager.GetString("MODEL_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;num_Passengers&apos; must be greater than zero..
+        /// </summary>
+        public static string NUM_PASSENGER_NOT_GREATER_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("NUM_PASSENGER_NOT_GREATER_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;steering_type&apos; cannot be empty and must be one of the values: &quot;mechanical&quot;, &quot;hydraulic&quot;, &quot;electric&quot; and  &quot;electroHydraulic&quot;..
+        /// </summary>
+        public static string STEERING_TYPE_INVALID {
+            get {
+                return ResourceManager.GetString("STEERING_TYPE_INVALID", resourceCulture);
             }
         }
         
@@ -106,7 +133,7 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The field &apos;Year&apos; cannot be empty..
+        ///   Looks up a localized string similar to The field &apos;year&apos; cannot be empty..
         /// </summary>
         public static string YEAR_EMPTY {
             get {

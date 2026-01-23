@@ -10,7 +10,7 @@ namespace RentCars.Domain.Entities
         public bool Active { get; set; } = true;
 
         // Atributos recebidos do cadastro
-        public string Model { get; set; } = string.Empty;
+        public string Model { get; set; } = String.Empty;
         public string Brand { get; set; } = String.Empty;
         public string Year { get; set; } = String.Empty;
         public string License_Plate { get; set; } = String.Empty;

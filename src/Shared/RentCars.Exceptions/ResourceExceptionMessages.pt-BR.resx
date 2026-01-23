@@ -118,21 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BRAND_EMPTY" xml:space="preserve">
-    <value>O campo 'Brand' não pode ser vazio.</value>
+    <value>O campo 'brand' não pode ser vazio.</value>
   </data>
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>A placa já existe para outro carro.</value>
   </data>
   <data name="LICENSE_PLATE_EMPTY" xml:space="preserve">
-    <value>O campo 'License_Plate' não pode ser vazio.</value>
+    <value>O campo 'license_Plate' não pode ser vazio.</value>
   </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
-    <value>O campo 'Model' não pode ser vazio.</value>
+    <value>O campo 'model' não pode ser vazio.</value>
+  </data>
+  <data name="NUM_PASSENGER_NOT_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>O campo 'num_Passengers' deve ser maior que zero.</value>
+  </data>
+  <data name="STEERING_TYPE_INVALID" xml:space="preserve">
+    <value>O campo 'steering_type' não pode ser vazio e deve conter algum dos seguintes valores: "mechanical", "hydraulic", "electric" e "electroHydraulic".</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Ocorreu um erro desconhecido.</value>
   </data>
   <data name="YEAR_EMPTY" xml:space="preserve">
-    <value>O campo 'Year' não pode ser vazio.</value>
+    <value>O campo 'year' não pode ser vazio.</value>
   </data>
 </root>

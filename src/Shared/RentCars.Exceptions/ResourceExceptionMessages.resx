@@ -118,21 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BRAND_EMPTY" xml:space="preserve">
-    <value>The field 'Brand' cannot be empty.</value>
+    <value>The field 'brand' cannot be empty.</value>
   </data>
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>License Plate already registered for another car.</value>
   </data>
   <data name="LICENSE_PLATE_EMPTY" xml:space="preserve">
-    <value>The field 'License_Plate' cannot be empty.</value>
+    <value>The field 'license_Plate' cannot be empty.</value>
+  </data>
+  <data name="LICENSE_PLATE_LENGTH_OUT_OF_RANGE" xml:space="preserve">
+    <value>"license plate" should be between 0 and 7 characteres length.</value>
   </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
-    <value>The field 'Model' cannot be empty.</value>
+    <value>The field 'model' cannot be empty.</value>
+  </data>
+  <data name="NUM_PASSENGER_NOT_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>The field 'num_Passengers' must be greater than zero.</value>
+  </data>
+  <data name="STEERING_TYPE_INVALID" xml:space="preserve">
+    <value>The field 'steering_type' cannot be empty and must be one of the values: "mechanical", "hydraulic", "electric" and  "electroHydraulic".</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown error occurred.</value>
   </data>
   <data name="YEAR_EMPTY" xml:space="preserve">
-    <value>The field 'Year' cannot be empty.</value>
+    <value>The field 'year' cannot be empty.</value>
   </data>
 </root>

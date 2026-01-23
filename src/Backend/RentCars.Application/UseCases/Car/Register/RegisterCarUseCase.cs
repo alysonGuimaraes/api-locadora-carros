@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.Execution;
-using RentCars.Application.Services.AutoMapper;
 using RentCars.Communication.Requests;
 using RentCars.Communication.Responses;
 using RentCars.Domain.Repositories;
@@ -40,7 +38,7 @@ namespace RentCars.Application.UseCases.Car.Register
 
             return new ResponseRegisteredCarJson
             {
-                Model = request.Model,
+                Model = car.Model,
             };
         }
 
