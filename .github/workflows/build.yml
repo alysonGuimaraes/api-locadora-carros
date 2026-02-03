@@ -45,9 +45,9 @@ jobs:
       - name: Begin SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: .\.sonar\scanner\dotnet-sonarscanner begin `
-          /k:"asafeCode_MeuLivroDeReceitas" `
-          /o:"matheusasafe" `
+        run: ${{ runner.temp }}\scanner\dotnet-sonarscanner begin `
+          /k:"alysonGuimaraes_api-locadora-carros" `
+          /o:"alysonguimaraes" `
           /d:sonar.token="$env:SONAR_TOKEN" `
           /d:sonar.cs.opencover.reportsPaths=tests/**/*.Test/cobertura/coverage.opencover.xml
 
@@ -63,4 +63,4 @@ jobs:
       - name: End SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
+        run: ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
