@@ -15,9 +15,13 @@ namespace RentCars.Infrastructure
     {
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            AddRepositories(services);
+
+            if (configuration.IsUnitTestEnvironment())
+                return;
+
             AddDbContext_Postgres(services, configuration);
             AddFluentMigrator_Postgres(services, configuration);
-            AddRepositories(services);
         }
 
         private static void AddDbContext_Postgres(IServiceCollection services, IConfiguration configuration)

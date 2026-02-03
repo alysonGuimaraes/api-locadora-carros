@@ -126,6 +126,9 @@
   <data name="LICENSE_PLATE_EMPTY" xml:space="preserve">
     <value>O campo 'license_Plate' não pode ser vazio.</value>
   </data>
+  <data name="LICENSE_PLATE_LENGTH_OUT_OF_RANGE" xml:space="preserve">
+    <value>"licene_plate" deve ter entre 0 e 7 caracteres.</value>
+  </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
     <value>O campo 'model' não pode ser vazio.</value>
   </data>
@@ -140,5 +143,8 @@
   </data>
   <data name="YEAR_EMPTY" xml:space="preserve">
     <value>O campo 'year' não pode ser vazio.</value>
+  </data>
+  <data name="YEAR_FIRST_FORD" xml:space="preserve">
+    <value>O campo 'year' deve ser maior que 1908. É difícil que o veículo seja mais antigo que isso.</value>
   </data>
 </root>

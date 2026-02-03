@@ -48,9 +48,17 @@ app.Run();
 
 void MigrateDatabase()
 {
+    if (builder.Configuration.IsUnitTestEnvironment())
+        return;
+
     var connectionString = builder.Configuration.ConnectionString();
 
     var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
 
     DatabaseMigrations.Migrate(connectionString, serviceScope.ServiceProvider);
+}
+
+public partial class Program
+{
+
 }

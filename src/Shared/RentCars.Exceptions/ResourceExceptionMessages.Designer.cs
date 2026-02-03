@@ -140,5 +140,14 @@ namespace RentCars.Exceptions {
                 return ResourceManager.GetString("YEAR_EMPTY", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;year&apos; field must be greater than 1908. It&apos;s unlikely that the car being registered is older than that..
+        /// </summary>
+        public static string YEAR_FIRST_FORD {
+            get {
+                return ResourceManager.GetString("YEAR_FIRST_FORD", resourceCulture);
+            }
+        }
     }
 }

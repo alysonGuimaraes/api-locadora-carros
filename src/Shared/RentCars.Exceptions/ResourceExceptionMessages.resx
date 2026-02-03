@@ -144,4 +144,7 @@
   <data name="YEAR_EMPTY" xml:space="preserve">
     <value>The field 'year' cannot be empty.</value>
   </data>
+  <data name="YEAR_FIRST_FORD" xml:space="preserve">
+    <value>The 'year' field must be greater than 1908. It's unlikely that the car being registered is older than that.</value>
+  </data>
 </root>

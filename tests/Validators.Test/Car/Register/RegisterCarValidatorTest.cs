@@ -34,7 +34,7 @@ namespace Validators.Test.Car.Register
         }
 
         [Fact]
-        public void Error_CarBrand_Empty()
+        public void Error_Car_Brand_Empty()
         {
             var validator = new RegisterCarValidator();
 
@@ -49,7 +49,22 @@ namespace Validators.Test.Car.Register
         }
 
         [Fact]
-        public void Error_CarLicensePlate_Empty()
+        public void Error_Car_Year_Empty()
+        {
+            var validator = new RegisterCarValidator();
+
+            var request = RequestRegisterCarJsonBuilder.Build();
+            request.Year = null;
+
+            var result = validator.Validate(request);
+
+            Assert.False(result.IsValid);
+            Assert.Single(result.Errors);
+            Assert.Contains(ResourceExceptionMessages.YEAR_EMPTY, result.Errors[0].ErrorMessage);
+        }
+
+        [Fact]
+        public void Error_Car_License_Plate_Empty()
         {
             var validator = new RegisterCarValidator();
 
@@ -79,7 +94,7 @@ namespace Validators.Test.Car.Register
         }
 
         [Fact]
-        public void Error_CarNumPassengers_GreaterThanZero()
+        public void Error_Car_Num_Passengers_GreaterThanZero()
         {
             var validator = new RegisterCarValidator();
 
@@ -109,7 +124,7 @@ namespace Validators.Test.Car.Register
         }
 
         [Fact]
-        public void Error_CarSteeringType_InvalidValue()
+        public void Error_Car_Steering_Type_InvalidValue()
         {
             var validator = new RegisterCarValidator();
 
@@ -121,6 +136,21 @@ namespace Validators.Test.Car.Register
             Assert.False(result.IsValid);
             Assert.Single(result.Errors);
             Assert.Contains(ResourceExceptionMessages.STEERING_TYPE_INVALID, result.Errors[0].ErrorMessage);
+        }
+
+        [Fact]
+        public void Error_Car_Year_Too_Old()
+        {
+            var validator = new RegisterCarValidator();
+
+            var request = RequestRegisterCarJsonBuilder.Build();
+            request.Year = 1907;
+
+            var result = validator.Validate(request);
+
+            Assert.False(result.IsValid);
+            Assert.Single(result.Errors);
+            Assert.Contains(ResourceExceptionMessages.YEAR_FIRST_FORD, result.Errors[0].ErrorMessage);
         }
 
     }

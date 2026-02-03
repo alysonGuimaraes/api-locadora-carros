@@ -13,7 +13,8 @@ namespace RentCars.Application.UseCases.Car.Register
 
             RuleFor(car => car.Brand).NotEmpty().WithMessage(ResourceExceptionMessages.BRAND_EMPTY);
 
-            RuleFor(car => car.Year).NotNull().WithMessage(ResourceExceptionMessages.YEAR_EMPTY);
+            RuleFor(car => car.Year).NotNull().WithMessage(ResourceExceptionMessages.YEAR_EMPTY)
+                .GreaterThanOrEqualTo(1908).WithMessage(ResourceExceptionMessages.YEAR_FIRST_FORD);
 
             RuleFor(car => car.License_Plate).NotEmpty().WithMessage(ResourceExceptionMessages.LICENSE_PLATE_EMPTY)
                 .Length(0,7).WithMessage(ResourceExceptionMessages.LICENSE_PLATE_LENGTH_OUT_OF_RANGE);

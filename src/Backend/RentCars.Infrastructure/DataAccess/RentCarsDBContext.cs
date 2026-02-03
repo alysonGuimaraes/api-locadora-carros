@@ -5,7 +5,7 @@ namespace RentCars.Infrastructure.DataAccess
 {
     public class RentCarsDBContext : DbContext
     {
-        public RentCarsDBContext(DbContextOptions options) : base(options) { }
+        public RentCarsDBContext(DbContextOptions<RentCarsDBContext> options) : base(options) { }
 
         public DbSet<Car> Cars { get; set; }
 
