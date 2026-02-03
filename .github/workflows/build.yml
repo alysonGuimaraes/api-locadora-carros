@@ -43,6 +43,6 @@ jobs:
         shell: powershell
         run: |
           ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"alysonGuimaraes_api-locadora-carros" /o:"alysonguimaraes" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="**\coverage.opencover.xml" /d:sonar.exclusions="**/CommonTestUtilities/**"
-          dotnet build RentCars.sln --configuration Release --no-incremental
-          dotnet test RentCars.sln --configuration Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="..\coverage.opencover.xml"
+          dotnet build RentCars.slnx --configuration Release --no-incremental
+          dotnet test RentCars.slnx --configuration Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="..\coverage.opencover.xml"
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
