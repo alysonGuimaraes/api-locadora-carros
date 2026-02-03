@@ -14,16 +14,19 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'zulu' # Alternative distribution options are available.
+          distribution: 'zulu' 
+          
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  
+          
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
         with:
           path: ~\sonar\cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
+          
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -31,18 +34,33 @@ jobs:
           path: ${{ runner.temp }}\scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
+          
       - name: Install SonarQube Cloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
         run: |
           New-Item -Path ${{ runner.temp }}\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path ${{ runner.temp }}\scanner
-      - name: Build and analyze
+
+      - name: Begin SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: powershell
+        run: .\.sonar\scanner\dotnet-sonarscanner begin `
+          /k:"asafeCode_MeuLivroDeReceitas" `
+          /o:"matheusasafe" `
+          /d:sonar.token="$env:SONAR_TOKEN" `
+          /d:sonar.cs.opencover.reportsPaths=tests/**/*.Test/cobertura/coverage.opencover.xml
+
+      - name: Restore dependencies
+        run: dotnet restore
+          
+      - name: Run tests and collect code coverage
         run: |
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"alysonGuimaraes_api-locadora-carros" /o:"alysonguimaraes" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="**\coverage.opencover.xml" /d:sonar.exclusions="**/CommonTestUtilities/**"
-          dotnet build RentCars.slnx --configuration Release --no-incremental
-          dotnet test RentCars.slnx --configuration Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="..\coverage.opencover.xml"
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          dotnet test tests/UseCases.Test/UseCases.Test.csproj /p:CollectCoverage=true /p:CoverletOutput=./cobertura/ /p:CoverletOutputFormat=opencover
+          dotnet test tests/Validators.Test/Validators.Test.csproj /p:CollectCoverage=true /p:CoverletOutput=./cobertura/ /p:CoverletOutputFormat=opencover
+          dotnet test tests/WebApi.Test/WebApi.Test.csproj /p:CollectCoverage=true /p:CoverletOutput=./cobertura/ /p:CoverletOutputFormat=opencover
+
+      - name: End SonarCloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
