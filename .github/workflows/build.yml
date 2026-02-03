@@ -43,13 +43,16 @@ jobs:
           dotnet tool update dotnet-sonarscanner --tool-path ${{ runner.temp }}\scanner
 
       - name: Begin SonarCloud analysis
+        shell: powershell
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ${{ runner.temp }}\scanner\dotnet-sonarscanner begin `
-          /k:"alysonGuimaraes_api-locadora-carros" `
-          /o:"alysonguimaraes" `
-          /d:sonar.token="$env:SONAR_TOKEN" `
-          /d:sonar.cs.opencover.reportsPaths=tests/**/*.Test/cobertura/coverage.opencover.xml
+        run: |
+          & "${{ runner.temp }}\scanner\dotnet-sonarscanner" begin `
+            /k:"alysonGuimaraes_api-locadora-carros" `
+            /o:"alysonguimaraes" `
+            /d:sonar.token="$env:SONAR_TOKEN" `
+            /d:sonar.cs.opencover.reportsPaths="tests/UseCases.Test/cobertura/coverage.opencover.xml,tests/Validators.Test/cobertura/coverage.opencover.xml,tests/WebApi.Test/cobertura/coverage.opencover.xml"
+
 
       - name: Restore dependencies
         run: dotnet restore
