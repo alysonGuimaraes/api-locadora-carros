@@ -13,7 +13,7 @@ namespace RentCars.API.Filters
         {
             if (context.Exception is RentCarsException)
             {
-                HandleProjectExcpetion(context);
+                HandleProjectException(context);
             }
             else
             {
@@ -21,18 +21,16 @@ namespace RentCars.API.Filters
             }
         }
 
-        private void HandleProjectExcpetion(ExceptionContext context)
+        private static void HandleProjectException(ExceptionContext context)
         {
-            if (context.Exception is ErrorOnValidationException) 
+            if (context.Exception is ErrorOnValidationException exception) 
             { 
-                var exception = context.Exception as ErrorOnValidationException;
-
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                context.Result = new BadRequestObjectResult(new ResponseErrorJson(exception.ErrorsMessages));
+                context.Result = new BadRequestObjectResult(new ResponseErrorJson(exception!.ErrorsMessages));
             }
         }
 
-        private void ThrowUnknownException(ExceptionContext context)
+        private static void ThrowUnknownException(ExceptionContext context)
         {
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Result = new ObjectResult(new ResponseErrorJson(ResourceExceptionMessages.UNKNOWN_ERROR));

@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using RentCars.Domain.Extensions;
+using System.Globalization;
 
 namespace RentCars.API.Middleware
 {
@@ -19,10 +20,10 @@ namespace RentCars.API.Middleware
 
             var languageInfo = new CultureInfo("en");
 
-            if (String.IsNullOrWhiteSpace(requestedLanguage) == false 
+            if (String.IsNullOrWhiteSpace(requestedLanguage).IsFalse()
                 && supportedLanguages.Any(c => c.Name.Equals(requestedLanguage)))
             {
-                languageInfo = new CultureInfo(requestedLanguage);
+                languageInfo = new CultureInfo(requestedLanguage!);
             }
 
             CultureInfo.CurrentCulture = languageInfo;

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using RentCars.Communication.Requests;
 using RentCars.Communication.Responses;
+using RentCars.Domain.Extensions;
 using RentCars.Domain.Repositories;
 using RentCars.Domain.Repositories.Car;
 using RentCars.Exceptions;
@@ -54,7 +55,7 @@ namespace RentCars.Application.UseCases.Car.Register
                 result.Errors.Add(new FluentValidation.Results.ValidationFailure(string.Empty, ResourceExceptionMessages.LICENSE_PLATE_ALREADY_REGISTERED));
             }
 
-            if (result.IsValid == false)
+            if (result.IsValid.IsFalse())
             {
                 var errorMessages = result.Errors.Select(e => e.ErrorMessage).ToList();
 

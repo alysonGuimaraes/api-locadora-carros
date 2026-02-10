@@ -36,7 +36,7 @@ namespace UseCases.Test.Car.Register
             Assert.Equal(ResourceExceptionMessages.LICENSE_PLATE_ALREADY_REGISTERED, exception.ErrorsMessages.First());
         }
 
-        private RegisterCarUseCase CreateUseCase(string? plate = null)
+        private static RegisterCarUseCase CreateUseCase(string? plate = null)
         {
             var mapper = MapperBuilder.Build();
             var writeRepoitory = CarWriteOnlyRepositoryBuilder.Build();
