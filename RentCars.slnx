@@ -10,5 +10,10 @@
     <Project Path="src/Shared/RentCars.Communication/RentCars.Communication.csproj" Id="9b22918d-902a-4a54-a9c4-7ee2c5362df3" />
     <Project Path="src/Shared/RentCars.Exceptions/RentCars.Exceptions.csproj" Id="f37a9220-f7c8-4cce-a443-66361f8f7807" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" Id="15e786c0-ef19-49c8-99bc-ce9c80726dfc" />
+    <Project Path="tests/UseCases.Test/UseCases.Test.csproj" Id="1e6782ed-1c05-42c9-9ebb-3eef05873341" />
+    <Project Path="tests/Validators.Test/Validators.Test.csproj" Id="1a198799-9bd9-4e3e-9a11-4973756e55d5" />
+    <Project Path="tests/WebApi.Test/WebApi.Test.csproj" Id="3fb3ddae-5c54-4d58-995e-d2309f353006" />
+  </Folder>
 </Solution>
