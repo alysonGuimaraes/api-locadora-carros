@@ -1,5 +1,4 @@
 ﻿using CommonTestUtilities.Requests;
-using Microsoft.AspNetCore.Mvc.Testing;
 using RentCars.Exceptions;
 using System.Globalization;
 using System.Net;
