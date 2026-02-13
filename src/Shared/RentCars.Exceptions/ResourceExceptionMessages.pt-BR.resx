@@ -120,6 +120,9 @@
   <data name="BRAND_EMPTY" xml:space="preserve">
     <value>O campo 'brand' não pode ser vazio.</value>
   </data>
+  <data name="GENDER_EMPTY" xml:space="preserve">
+    <value>O campo 'gender' não pode ser vazio.</value>
+  </data>
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>A placa já existe para outro carro.</value>
   </data>
@@ -131,6 +134,12 @@
   </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
     <value>O campo 'model' não pode ser vazio.</value>
+  </data>
+  <data name="NAME_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'name' não pode ser vazio.</value>
+  </data>
+  <data name="LASTNAME_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'lastname' não pode ser vazio.</value>
   </data>
   <data name="NUM_PASSENGER_NOT_GREATER_THAN_ZERO" xml:space="preserve">
     <value>O campo 'num_Passengers' deve ser maior que zero.</value>
@@ -144,7 +153,52 @@
   <data name="YEAR_EMPTY" xml:space="preserve">
     <value>O campo 'year' não pode ser vazio.</value>
   </data>
+  <data name="ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'address' não pode ser vazio.</value>
+  </data>
   <data name="YEAR_FIRST_FORD" xml:space="preserve">
     <value>O campo 'year' deve ser maior que 1908. É difícil que o veículo seja mais antigo que isso.</value>
+  </data>
+  <data name="DOCUMENT_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'document_type' não pode ser vazio.</value>
+  </data>
+  <data name="BIRTH_DATE_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'birth_date' não pode ser vazio.</value>
+  </data>
+  <data name="ZIP_CODE_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'zip_code' não pode ser vazio.</value>
+  </data>
+  <data name="CITY_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'city' não pode ser vazio.</value>
+  </data>
+  <data name="STATE_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'state' não pode ser vazio.</value>
+  </data>
+  <data name="STREET_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'street' não pode ser vazio.</value>
+  </data>
+  <data name="NEIGHBORHOOD_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'neighborhood' não pode ser vazio.</value>
+  </data>
+  <data name="COUNTRY_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'country' não pode ser vazio.</value>
+  </data>
+  <data name="EMAIL_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'email' não pode ser vazio.</value>
+  </data>
+  <data name="DOCUMENT_TYPE_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'document_type' não pode ser vazio.</value>
+  </data>
+  <data name="PHONE_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'phone' não pode ser vazio.</value>
+  </data>
+  <data name="PASSWORD_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'password' não pode ser vazio.</value>
+  </data>
+  <data name="DDD_USER_EMPTY" xml:space="preserve">
+    <value>O campo 'ddd' não pode ser vazio.</value>
+  </data>
+  <data name="INVALID_EMAIL_ADDRESS" xml:space="preserve">
+    <value>O endereço de email fornecido é inválido.</value>
   </data>
 </root>

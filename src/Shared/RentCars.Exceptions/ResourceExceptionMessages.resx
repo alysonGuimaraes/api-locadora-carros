@@ -120,6 +120,9 @@
   <data name="BRAND_EMPTY" xml:space="preserve">
     <value>The field 'brand' cannot be empty.</value>
   </data>
+  <data name="GENDER_EMPTY" xml:space="preserve">
+    <value>The field 'gender' cannot be empty.</value>
+  </data>
   <data name="LICENSE_PLATE_ALREADY_REGISTERED" xml:space="preserve">
     <value>License Plate already registered for another car.</value>
   </data>
@@ -131,6 +134,12 @@
   </data>
   <data name="MODEL_EMPTY" xml:space="preserve">
     <value>The field 'model' cannot be empty.</value>
+  </data>
+  <data name="NAME_USER_EMPTY" xml:space="preserve">
+    <value>The field 'name' cannot be empty.</value>
+  </data>
+  <data name="LASTNAME_USER_EMPTY" xml:space="preserve">
+    <value>The field 'lastname' cannot be empty.</value>
   </data>
   <data name="NUM_PASSENGER_NOT_GREATER_THAN_ZERO" xml:space="preserve">
     <value>The field 'num_Passengers' must be greater than zero.</value>
@@ -144,7 +153,52 @@
   <data name="YEAR_EMPTY" xml:space="preserve">
     <value>The field 'year' cannot be empty.</value>
   </data>
+  <data name="ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'address' cannot be empty.</value>
+  </data>
   <data name="YEAR_FIRST_FORD" xml:space="preserve">
     <value>The 'year' field must be greater than 1908. It's unlikely that the car being registered is older than that.</value>
+  </data>
+  <data name="DOCUMENT_USER_EMPTY" xml:space="preserve">
+    <value>The field 'document_type' cannot be empty.</value>
+  </data>
+  <data name="BIRTH_DATE_USER_EMPTY" xml:space="preserve">
+    <value>The field 'birth_date' cannot be empty.</value>
+  </data>
+  <data name="ZIP_CODE_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'zip_code' cannot be empty.</value>
+  </data>
+  <data name="CITY_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'city' cannot be empty.</value>
+  </data>
+  <data name="STATE_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'state' cannot be empty.</value>
+  </data>
+  <data name="STREET_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'street' cannot be empty.</value>
+  </data>
+  <data name="NEIGHBORHOOD_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'neighborhood' cannot be empty.</value>
+  </data>
+  <data name="COUNTRY_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'country' cannot be empty.</value>
+  </data>
+  <data name="EMAIL_USER_EMPTY" xml:space="preserve">
+    <value>The field 'email' cannot be empty.</value>
+  </data>
+  <data name="DOCUMENT_TYPE_USER_EMPTY" xml:space="preserve">
+    <value>The field 'document_type' cannot be empty.</value>
+  </data>
+  <data name="PHONE_USER_EMPTY" xml:space="preserve">
+    <value>The field 'phone' cannot be empty.</value>
+  </data>
+  <data name="PASSWORD_USER_EMPTY" xml:space="preserve">
+    <value>The field 'password' cannot be empty.</value>
+  </data>
+  <data name="DDD_USER_EMPTY" xml:space="preserve">
+    <value>The field 'ddd' cannot be empty.</value>
+  </data>
+  <data name="INVALID_EMAIL_ADDRESS" xml:space="preserve">
+    <value>The email address provided is invalid.</value>
   </data>
 </root>

@@ -1,5 +1,5 @@
 ﻿using FluentMigrator;
-using RentCars.Domain.Enums;
+using RentCars.Domain.Enums.Car;
 
 namespace RentCars.Infrastructure.Migrations.Versions
 {

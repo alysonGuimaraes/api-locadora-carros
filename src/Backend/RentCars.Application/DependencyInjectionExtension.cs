@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using RentCars.Application.Services.AutoMapper;
 using RentCars.Application.UseCases.Car.Register;
+using RentCars.Application.UseCases.User.Register;
 
 namespace RentCars.Application
 {
@@ -25,6 +26,7 @@ namespace RentCars.Application
         private static void AddUseCases(IServiceCollection services)
         {
             services.AddScoped<IRegisterCarUseCase, RegisterCarUseCase>();
+            services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
         }
     }
 }
