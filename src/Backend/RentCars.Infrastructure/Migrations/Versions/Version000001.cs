@@ -3,7 +3,7 @@ using RentCars.Domain.Enums.Car;
 
 namespace RentCars.Infrastructure.Migrations.Versions
 {
-    [Migration(DatabaseVersions.TABLE_USER, "Create table to save the car's information")]
+    [Migration(DatabaseVersions.TABLE_CAR, "Create table to save the car's information")]
     public class Version000001 : VersionBase
     {
         public override void Up()

@@ -2,7 +2,6 @@
 using RentCars.Communication.Requests;
 using RentCars.Domain.Enums.Address;
 using RentCars.Exceptions;
-using System.Net;
 
 namespace RentCars.Application.Validators
 {
