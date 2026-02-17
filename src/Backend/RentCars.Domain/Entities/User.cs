@@ -24,6 +24,7 @@ namespace RentCars.Domain.Entities
         public string Country { get; set; } = String.Empty;
         public string Street {  get; set; } = String.Empty;
         public string State { get; set; } = String.Empty;
+        public string Neighborhood { get; set; } = String.Empty;
         public string House_Number {  get; set; } = String.Empty;
         public EnumGender Gender {  get; set; }
 

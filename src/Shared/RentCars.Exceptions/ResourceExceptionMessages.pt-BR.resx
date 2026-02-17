@@ -201,4 +201,13 @@
   <data name="INVALID_EMAIL_ADDRESS" xml:space="preserve">
     <value>O endereço de email fornecido é inválido.</value>
   </data>
+  <data name="USER_EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>Email cadastrado em outro usuário.</value>
+  </data>
+  <data name="USER_PHONE_NUMBER_ALREADY_REGISTERED" xml:space="preserve">
+    <value>Telefone cadastrado em outro usuário.</value>
+  </data>
+  <data name="USER_DOCUMENT_INVALID" xml:space="preserve">
+    <value>Um documento inválido foi inserido.</value>
+  </data>
 </root>

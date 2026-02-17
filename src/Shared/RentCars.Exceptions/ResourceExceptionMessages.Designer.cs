@@ -286,6 +286,33 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The document is invalid..
+        /// </summary>
+        public static string USER_DOCUMENT_INVALID {
+            get {
+                return ResourceManager.GetString("USER_DOCUMENT_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email already registered..
+        /// </summary>
+        public static string USER_EMAIL_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("USER_EMAIL_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number already registered..
+        /// </summary>
+        public static string USER_PHONE_NUMBER_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("USER_PHONE_NUMBER_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &apos;year&apos; cannot be empty..
         /// </summary>
         public static string YEAR_EMPTY {

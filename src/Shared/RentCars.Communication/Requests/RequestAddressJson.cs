@@ -1,6 +1,4 @@
-﻿using RentCars.Domain.Enums.Address;
-
-namespace RentCars.Communication.Requests
+﻿namespace RentCars.Communication.Requests
 {
     public class RequestAddressJson
     {
