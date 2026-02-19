@@ -1,4 +1,4 @@
-﻿using CommonTestUtilities.Requests;
+﻿using CommonTestUtilities.Requests.Car;
 using RentCars.Exceptions;
 using System.Globalization;
 using System.Net;
