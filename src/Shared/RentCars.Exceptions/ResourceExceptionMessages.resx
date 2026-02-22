@@ -156,6 +156,9 @@
   <data name="ADDRESS_EMPTY" xml:space="preserve">
     <value>The field 'address' cannot be empty.</value>
   </data>
+  <data name="HOUSE_NUMBER_ADDRESS_EMPTY" xml:space="preserve">
+    <value>The field 'house_number' cannot be empty.</value>
+  </data>
   <data name="YEAR_FIRST_FORD" xml:space="preserve">
     <value>The 'year' field must be greater than 1908. It's unlikely that the car being registered is older than that.</value>
   </data>

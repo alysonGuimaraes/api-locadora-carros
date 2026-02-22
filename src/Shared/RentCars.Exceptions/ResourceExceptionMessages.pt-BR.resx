@@ -156,6 +156,9 @@
   <data name="ADDRESS_EMPTY" xml:space="preserve">
     <value>O campo 'address' não pode ser vazio.</value>
   </data>
+  <data name="HOUSE_NUMBER_ADDRESS_EMPTY" xml:space="preserve">
+    <value>O campo 'house_number' não pode ser vazio.</value>
+  </data>
   <data name="YEAR_FIRST_FORD" xml:space="preserve">
     <value>O campo 'year' deve ser maior que 1908. É difícil que o veículo seja mais antigo que isso.</value>
   </data>

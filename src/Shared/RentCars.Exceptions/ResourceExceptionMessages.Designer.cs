@@ -151,6 +151,15 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &apos;house_number&apos; cannot be empty..
+        /// </summary>
+        public static string HOUSE_NUMBER_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("HOUSE_NUMBER_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The email address provided is invalid..
         /// </summary>
         public static string INVALID_EMAIL_ADDRESS {

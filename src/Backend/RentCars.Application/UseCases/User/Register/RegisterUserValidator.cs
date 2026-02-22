@@ -25,7 +25,7 @@ namespace RentCars.Application.UseCases.User.Register
             RuleFor(user => user.Gender).NotEmpty().WithMessage(ResourceExceptionMessages.GENDER_EMPTY);
 
 
-            RuleFor(user => user.Address)
+            RuleFor(user => user.Address!)
                 .NotEmpty().WithMessage(ResourceExceptionMessages.ADDRESS_EMPTY)
                 .SetValidator(new AddressValidator());
         }
