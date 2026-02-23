@@ -5,6 +5,7 @@ using RentCars.Infrastructure;
 using RentCars.Infrastructure.Migrations;
 using RentCars.Infrastructure.Extensions;
 using System.Text.Json.Serialization;
+using RentCars.API.Converters;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        options.JsonSerializerOptions.Converters.Add(new StringConverter());
     });
 
 builder.Services.AddMvc(options => options.Filters.Add<ExceptionFilter>());
@@ -24,6 +26,8 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 
