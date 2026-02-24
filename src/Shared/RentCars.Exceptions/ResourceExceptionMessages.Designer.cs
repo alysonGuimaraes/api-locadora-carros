@@ -61,11 +61,119 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &apos;address&apos; cannot be empty..
+        /// </summary>
+        public static string ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;birth_date&apos; cannot be empty..
+        /// </summary>
+        public static string BIRTH_DATE_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("BIRTH_DATE_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &apos;brand&apos; cannot be empty..
         /// </summary>
         public static string BRAND_EMPTY {
             get {
                 return ResourceManager.GetString("BRAND_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;city&apos; cannot be empty..
+        /// </summary>
+        public static string CITY_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("CITY_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;country&apos; cannot be empty..
+        /// </summary>
+        public static string COUNTRY_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("COUNTRY_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;ddd&apos; cannot be empty..
+        /// </summary>
+        public static string DDD_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("DDD_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;document_type&apos; cannot be empty..
+        /// </summary>
+        public static string DOCUMENT_TYPE_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("DOCUMENT_TYPE_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;document_type&apos; cannot be empty..
+        /// </summary>
+        public static string DOCUMENT_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("DOCUMENT_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;email&apos; cannot be empty..
+        /// </summary>
+        public static string EMAIL_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("EMAIL_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;gender&apos; cannot be empty..
+        /// </summary>
+        public static string GENDER_EMPTY {
+            get {
+                return ResourceManager.GetString("GENDER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;house_number&apos; cannot be empty..
+        /// </summary>
+        public static string HOUSE_NUMBER_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("HOUSE_NUMBER_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email address provided is invalid..
+        /// </summary>
+        public static string INVALID_EMAIL_ADDRESS {
+            get {
+                return ResourceManager.GetString("INVALID_EMAIL_ADDRESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;lastname&apos; cannot be empty..
+        /// </summary>
+        public static string LASTNAME_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("LASTNAME_USER_EMPTY", resourceCulture);
             }
         }
         
@@ -106,11 +214,56 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &apos;name&apos; cannot be empty..
+        /// </summary>
+        public static string NAME_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("NAME_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;neighborhood&apos; cannot be empty..
+        /// </summary>
+        public static string NEIGHBORHOOD_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("NEIGHBORHOOD_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The field &apos;num_Passengers&apos; must be greater than zero..
         /// </summary>
         public static string NUM_PASSENGER_NOT_GREATER_THAN_ZERO {
             get {
                 return ResourceManager.GetString("NUM_PASSENGER_NOT_GREATER_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;password&apos; cannot be empty..
+        /// </summary>
+        public static string PASSWORD_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("PASSWORD_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;phone&apos; cannot be empty..
+        /// </summary>
+        public static string PHONE_USER_EMPTY {
+            get {
+                return ResourceManager.GetString("PHONE_USER_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;state&apos; cannot be empty..
+        /// </summary>
+        public static string STATE_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("STATE_ADDRESS_EMPTY", resourceCulture);
             }
         }
         
@@ -124,11 +277,47 @@ namespace RentCars.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The field &apos;street&apos; cannot be empty..
+        /// </summary>
+        public static string STREET_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("STREET_ADDRESS_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown error occurred..
         /// </summary>
         public static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The document is invalid..
+        /// </summary>
+        public static string USER_DOCUMENT_INVALID {
+            get {
+                return ResourceManager.GetString("USER_DOCUMENT_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email already registered..
+        /// </summary>
+        public static string USER_EMAIL_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("USER_EMAIL_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number already registered..
+        /// </summary>
+        public static string USER_PHONE_NUMBER_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("USER_PHONE_NUMBER_ALREADY_REGISTERED", resourceCulture);
             }
         }
         
@@ -147,6 +336,15 @@ namespace RentCars.Exceptions {
         public static string YEAR_FIRST_FORD {
             get {
                 return ResourceManager.GetString("YEAR_FIRST_FORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &apos;zip_code&apos; cannot be empty..
+        /// </summary>
+        public static string ZIP_CODE_ADDRESS_EMPTY {
+            get {
+                return ResourceManager.GetString("ZIP_CODE_ADDRESS_EMPTY", resourceCulture);
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿using Moq;
 using RentCars.Domain.Repositories.Car;
 
-namespace CommonTestUtilities.Repositories
+namespace CommonTestUtilities.Repositories.Car
 {
     public class CarWriteOnlyRepositoryBuilder
     {

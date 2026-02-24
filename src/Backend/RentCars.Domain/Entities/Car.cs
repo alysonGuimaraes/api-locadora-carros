@@ -1,4 +1,4 @@
-﻿using RentCars.Domain.Enums;
+﻿using RentCars.Domain.Enums.Car;
 
 namespace RentCars.Domain.Entities
 {

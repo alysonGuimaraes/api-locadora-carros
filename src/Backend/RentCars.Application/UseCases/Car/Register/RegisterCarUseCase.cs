@@ -26,15 +26,11 @@ namespace RentCars.Application.UseCases.Car.Register
 
         public async Task<ResponseRegisteredCarJson> Execute(RequestRegisterCarJson request)
         {
-            // Validar request
             await Validate(request);
 
-            // mapear a request em uma entidade
             var car = _mapper.Map<Domain.Entities.Car>(request);
 
-            // Salvar no banco de dados
             await _writeOnlyRepository.Add(car);
-
             await _workUnit.Commit();
 
             return new ResponseRegisteredCarJson

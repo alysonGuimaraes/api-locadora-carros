@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RentCars.Domain.Repositories;
 using RentCars.Domain.Repositories.Car;
+using RentCars.Domain.Repositories.User;
 using RentCars.Infrastructure.DataAccess;
 using RentCars.Infrastructure.DataAccess.Repositories;
 using RentCars.Infrastructure.Extensions;
@@ -40,6 +41,9 @@ namespace RentCars.Infrastructure
 
             services.AddScoped<ICarWriteOnlyRepository, CarRepository>();
             services.AddScoped<ICarReadOnlyRepository, CarRepository>();
+
+            services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
+            services.AddScoped<IUserReadOnlyRepository, UserRepository>();
         }
 
         private static void AddFluentMigrator_Postgres(IServiceCollection services, IConfiguration configuration)

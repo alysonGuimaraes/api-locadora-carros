@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using RentCars.Communication.Requests;
-using RentCars.Domain.Enums;
+using RentCars.Domain.Enums.Car;
 using RentCars.Exceptions;
 
 namespace RentCars.Application.UseCases.Car.Register

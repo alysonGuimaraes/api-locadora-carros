@@ -1,4 +1,4 @@
-﻿using CommonTestUtilities.Requests;
+﻿using CommonTestUtilities.Requests.Car;
 using RentCars.Exceptions;
 using System.Globalization;
 using System.Net;
@@ -10,6 +10,7 @@ namespace WebApi.Test.Car.Register
 {
     public class RegisterCarTest : IClassFixture<CustomWebApplicationFactory>
     {
+        private readonly String _endpoint = "api/car";
         private readonly HttpClient _httpClient;
         public RegisterCarTest(CustomWebApplicationFactory factory)
         {
@@ -21,7 +22,7 @@ namespace WebApi.Test.Car.Register
         {
             var request = RequestRegisterCarJsonBuilder.Build();
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -44,7 +45,7 @@ namespace WebApi.Test.Car.Register
             
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -70,7 +71,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -96,7 +97,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -122,7 +123,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -148,7 +149,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -174,7 +175,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -200,7 +201,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -226,7 +227,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
@@ -252,7 +253,7 @@ namespace WebApi.Test.Car.Register
 
             _httpClient.DefaultRequestHeaders.Add("Accept-Language", culture);
 
-            var response = await _httpClient.PostAsJsonAsync("api/Car", request);
+            var response = await _httpClient.PostAsJsonAsync(_endpoint, request);
 
             await using var responseBody = await response.Content.ReadAsStreamAsync();
             var responseData = await JsonDocument.ParseAsync(responseBody);
