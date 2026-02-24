@@ -1,6 +1,7 @@
 ﻿using CommonTestUtilities.Mapper;
 using CommonTestUtilities.Repositories;
-using CommonTestUtilities.Requests;
+using CommonTestUtilities.Repositories.Car;
+using CommonTestUtilities.Requests.Car;
 using RentCars.Application.UseCases.Car.Register;
 using RentCars.Exceptions;
 using RentCars.Exceptions.ExceptionsBase;
@@ -10,7 +11,7 @@ namespace UseCases.Test.Car.Register
     public class RegisterCarUseCaseTest
     {
         [Fact]
-        public async Task success()
+        public async Task Success()
         {
             var request = RequestRegisterCarJsonBuilder.Build();
 

@@ -1,7 +1,7 @@
 ﻿using Bogus;
 using RentCars.Communication.Requests;
 
-namespace CommonTestUtilities.Requests
+namespace CommonTestUtilities.Requests.Car
 {
     public class RequestRegisterCarJsonBuilder
     {

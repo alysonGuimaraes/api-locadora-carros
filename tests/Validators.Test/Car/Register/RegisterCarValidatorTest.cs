@@ -1,4 +1,4 @@
-﻿using CommonTestUtilities.Requests;
+﻿using CommonTestUtilities.Requests.Car;
 using RentCars.Application.UseCases.Car.Register;
 using RentCars.Exceptions;
 

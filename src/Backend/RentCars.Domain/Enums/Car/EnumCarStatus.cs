@@ -1,4 +1,4 @@
-﻿namespace RentCars.Domain.Enums
+﻿namespace RentCars.Domain.Enums.Car
 {
     public enum EnumCarStatus
     {

@@ -1,0 +1,66 @@
+﻿using FluentMigrator;
+
+namespace RentCars.Infrastructure.Migrations.Versions
+{
+    [Migration(DatabaseVersions.TABLE_USER, "Create table to save the user's information")]
+    public class Version000002 : VersionBase
+    {
+        public override void Up()
+        {
+            CreateTable("Users")
+                .WithColumn("Name")
+                    .AsString(10)
+                    .NotNullable()
+                .WithColumn("Lastname")
+                    .AsString(30)
+                    .NotNullable()
+                .WithColumn("Document")
+                    .AsString(20)
+                    .NotNullable()
+                .WithColumn("Document_Type")
+                    .AsInt32()
+                    .NotNullable()
+                    .WithColumnDescription("Enum: CPF = 0, Passport = 1, Foreign_Document = 2")
+                .WithColumn("Birth_Date")
+                    .AsDateTime()
+                    .NotNullable()
+                .WithColumn("Email")
+                    .AsString(50)
+                    .NotNullable()
+                .WithColumn("DDD")
+                    .AsString(2)
+                    .NotNullable()
+                .WithColumn("Phone_Number")
+                    .AsString(9)
+                    .NotNullable()
+                .WithColumn("Password")
+                    .AsString(3000)
+                    .NotNullable()
+                .WithColumn("Zip_Code")
+                    .AsString(10)
+                    .NotNullable()
+                .WithColumn("City")
+                    .AsString(20)
+                    .NotNullable()
+                .WithColumn("Country")
+                    .AsString(15)
+                    .NotNullable()
+                .WithColumn("Street")
+                    .AsString(50)
+                    .NotNullable()
+                .WithColumn("State")
+                    .AsString(15)
+                    .NotNullable()
+                .WithColumn("Neighborhood")
+                    .AsString(25)
+                    .NotNullable()
+                .WithColumn("House_Number")
+                    .AsString(5)
+                    .NotNullable()
+                .WithColumn("Gender")
+                    .AsInt16()
+                    .NotNullable()
+                    .WithColumnDescription("Enum: Male = 0, Female = 1, Other = 2");
+        }
+    }
+}

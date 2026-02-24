@@ -8,6 +8,7 @@ namespace RentCars.Infrastructure.DataAccess
         public RentCarsDBContext(DbContextOptions<RentCarsDBContext> options) : base(options) { }
 
         public DbSet<Car> Cars { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
