@@ -27,13 +27,13 @@ namespace RentCars.Application.Services.AutoMapper
                 .ForMember(dest => dest.Document_Type, opt => opt.MapFrom(src => Enum.Parse<EnumDocumentType>(src.Document_Type, true)))
 
                 // Referente ao endereço
-                .ForMember(dest => dest.City, opt => opt.MapFrom(src => src.Address.City))
-                .ForMember(dest => dest.Zip_Code, opt => opt.MapFrom(src => src.Address.Zip_Code))
-                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Address.Country))
-                .ForMember(dest => dest.Street, opt => opt.MapFrom(src => src.Address.Street))
-                .ForMember(dest => dest.State, opt => opt.MapFrom(src => src.Address.State))
-                .ForMember(dest => dest.Neighborhood, opt => opt.MapFrom(src => src.Address.Neighborhood))
-                .ForMember(dest => dest.House_Number, opt => opt.MapFrom(src => src.Address.House_Number));
+                .ForMember(dest => dest.City, opt => opt.MapFrom(src => src.Address!.City))
+                .ForMember(dest => dest.Zip_Code, opt => opt.MapFrom(src => src.Address!.Zip_Code))
+                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Address!.Country))
+                .ForMember(dest => dest.Street, opt => opt.MapFrom(src => src.Address!.Street))
+                .ForMember(dest => dest.State, opt => opt.MapFrom(src => src.Address!.State))
+                .ForMember(dest => dest.Neighborhood, opt => opt.MapFrom(src => src.Address!.Neighborhood))
+                .ForMember(dest => dest.House_Number, opt => opt.MapFrom(src => src.Address!.House_Number));
         }
 
         private void DomainToResponse()
