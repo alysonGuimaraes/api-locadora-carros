@@ -1,6 +1,7 @@
 ﻿namespace RentCars.Exceptions.ExceptionsBase
 {
-    public class RentCarsException : Exception
+    public class RentCarsException : SystemException
     {
+        public RentCarsException(string message) : base(message) { }
     }
 }

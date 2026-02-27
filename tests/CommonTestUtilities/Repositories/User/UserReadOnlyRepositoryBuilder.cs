@@ -26,6 +26,11 @@ namespace CommonTestUtilities.Repositories.User
             _repository.Setup(repository => repository.ExistUserWithPhone(phone, ddd)).ReturnsAsync(true);
         }
 
+        public void GetByEmailAndPassword(RentCars.Domain.Entities.User user)
+        {
+            _repository.Setup(repository => repository.GetByEmailAndPassword(user.Email, user.Password)).ReturnsAsync(user);
+        }
+
         public IUserReadOnlyRepository Build()
         {
             return _repository.Object;

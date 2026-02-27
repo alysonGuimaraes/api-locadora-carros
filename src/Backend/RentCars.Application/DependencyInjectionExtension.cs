@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RentCars.Application.Services.AutoMapper;
 using RentCars.Application.Services.Cryptography;
 using RentCars.Application.UseCases.Car.Register;
+using RentCars.Application.UseCases.Login.DoLogin;
 using RentCars.Application.UseCases.User.Register;
 
 namespace RentCars.Application
@@ -31,6 +32,7 @@ namespace RentCars.Application
         {
             services.AddScoped<IRegisterCarUseCase, RegisterCarUseCase>();
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
+            services.AddScoped<IDoLoginUseCase, DoLoginUseCase>();
         }
 
         private static void AddPasswordEncripter(IServiceCollection services, IConfiguration configuration)

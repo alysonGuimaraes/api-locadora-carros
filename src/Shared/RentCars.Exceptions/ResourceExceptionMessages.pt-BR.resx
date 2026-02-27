@@ -213,4 +213,7 @@
   <data name="USER_DOCUMENT_INVALID" xml:space="preserve">
     <value>Um documento inválido foi inserido.</value>
   </data>
+  <data name="EMAIL_OR_PASSWORD_INVALID" xml:space="preserve">
+    <value>E-mail /ou senha inválidos.</value>
+  </data>
 </root>

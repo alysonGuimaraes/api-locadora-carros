@@ -1,9 +1,9 @@
 ﻿
+using CommonTestUtilities.Cryptography;
 using CommonTestUtilities.Mapper;
 using CommonTestUtilities.Repositories;
 using CommonTestUtilities.Repositories.User;
 using CommonTestUtilities.Requests.User;
-using RentCars.Application.Services.Cryptography;
 using RentCars.Application.UseCases.User.Register;
 using RentCars.Domain.Enums.User;
 using RentCars.Exceptions;
@@ -76,7 +76,7 @@ namespace UseCases.Test.User.Register
             var writeRepoitory = UserWriteOnlyRepositoryBuilder.Build();
             var unitWork = UnitWorkBuilder.Build();
             var readRepositoryBuilder = new UserReadOnlyRepositoryBuilder();
-            var passwordEncripter = new PasswordEncripter("Test");
+            var passwordEncripter = PasswordEncripterBuilder.Build();
 
             if (!string.IsNullOrEmpty(email))
             {
