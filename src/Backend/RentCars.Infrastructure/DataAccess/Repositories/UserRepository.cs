@@ -2,6 +2,7 @@
 using RentCars.Domain.Entities;
 using RentCars.Domain.Enums.User;
 using RentCars.Domain.Repositories.User;
+using System.Numerics;
 
 namespace RentCars.Infrastructure.DataAccess.Repositories
 {
@@ -31,6 +32,13 @@ namespace RentCars.Infrastructure.DataAccess.Repositories
         public async Task<bool> ExistUserWithPhone(string phone, string ddd)
         {
             return await _dbContext.Users.AnyAsync(user => user.Phone_Number.Equals(phone) && user.DDD.Equals(ddd));
+        }
+
+        public async Task<User?> GetByEmailAndPassword(string email, string password)
+        {
+            return await _dbContext.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(user => user.Email.Equals(email) && user.Password.Equals(password) && user.Active);
         }
     }
 }

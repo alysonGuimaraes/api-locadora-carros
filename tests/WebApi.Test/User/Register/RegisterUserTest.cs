@@ -28,5 +28,7 @@ namespace WebApi.Test.User.Register
             string? responseCreatedModel = responseData.RootElement.GetProperty("name").GetString();
             Assert.Equal(request.Name, responseCreatedModel);
         }
+
+        // Add more unit tests
     }
 }

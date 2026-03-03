@@ -5,9 +5,7 @@ using RentCars.Communication.Responses;
 
 namespace RentCars.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CarController : ControllerBase
+    public class CarController : RentCarsBaseController
     {
         [HttpPost]
         [ProducesResponseType(typeof(ResponseRegisteredCarJson), StatusCodes.Status201Created)]

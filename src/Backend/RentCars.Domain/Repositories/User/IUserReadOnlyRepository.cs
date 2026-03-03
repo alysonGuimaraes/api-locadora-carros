@@ -7,5 +7,7 @@ namespace RentCars.Domain.Repositories.User
         public Task<bool> ExistUserWithEmail(string email);
         public Task<bool> ExistUserWithDocument(EnumDocumentType doc_type, string document);
         public Task<bool> ExistUserWithPhone(string phone, string ddd);
+
+        public Task<Entities.User?> GetByEmailAndPassword(string email, string password);
     }
 }
